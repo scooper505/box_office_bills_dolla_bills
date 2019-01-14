@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box_office_bucks</title>
+    <!-- css sheet using flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- css sheet when not using flask -->
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Box Office Vs. Netflix</h1>
+            <p>We took some data about people going to the movies and some data about people streaming netflix and stuff    </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>-- BoX OffiCe BuCk$ --</h2>
+                <div class="chart"></div>
+                
+                <!-- source script when using flask  -->
+                <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+                <!-- source script when not using flask app -->
+                <!-- <script src="../static/js/app.js"></script> -->
+
+                <button id="start">Ticket & Revenue Trends</button>
+                <button id="reset">Reset</button>
+
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2><a href="/send">--Netflix and DVD Sales Data--</a></h2>
+                <!-- Alternative Movie Outlet Option Data -->
+                <div id="plot"></div>
+
+                <!-- source script when using flask  -->
+                <script src="{{ url_for('static', filename='js/projplots.js') }}"></script>
+
+                <!-- source script when not using flask app -->
+                <!-- <script src="../static/js/projplots.js"></script> -->
+
+                <!-- Drop Down Data Selector for Line Plot -->
+                <select id="selDataset" onchange="getData(this.value)">
+                    <option value="dataset1">US App Streaming</option>
+                    <option value="dataset2">US DVD Streaming</option>
+                    <option value="dataset3">US Netflix Revenue</option>
+                </select>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

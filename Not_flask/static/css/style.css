@@ -1,0 +1,84 @@
+.line {
+  fill: none;
+  stroke-width: 5px;
+  
+}
+
+.green {
+  stroke: rgb(25, 255, 4);
+  
+}
+
+.purple {
+  stroke: rgb(255, 5, 255);
+}
+
+.chart {
+  background-color: mintcream;
+  background-image: url("popcorn_clapboard.jpg");
+  background-repeat: no-repeat;
+  background-position-y: 25%;
+  background-position-x: 33%;
+  background-size: 835px 525px;
+
+}
+
+
+
+.axisText {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: black;
+  text-anchor: middle;
+}
+
+.axisText1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: rgb(255, 5, 255);
+  text-anchor: middle;
+}
+
+.axisText2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: rgb(25, 255, 4);
+  text-anchor: middle;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.6;
+  shape-rendering: crispEdges
+}
+.grid path {
+  stroke-width: 0;
+}
+
+.tooltip1 {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+  font: 10px sans-serif;
+  text-align: center;
+  color: white;
+  background: blue;
+  border: 0;
+  border-radius: 5px;
+  display: none;
+}
+
+.tooltip2 {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+  font: 10px sans-serif;
+  text-align: center;
+  color: white;
+  background: blue;
+  border: 0;
+  border-radius: 5px;
+  display: none;
+}
